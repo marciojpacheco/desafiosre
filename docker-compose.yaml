@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+    app:
+        image: uptime/app
+        container_name: uptime-app
+        ports:
+          - 8181:8181

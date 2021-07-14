@@ -1,11 +1,12 @@
-FROM python
+FROM python:3
 
-RUN pip install flask
+RUN pip3 install flask
 
-COPY /opt/app/app.py ./
-COPY /opt/app/up.py ./
+COPY app.py ./
+COPY up.py ./
 
 EXPOSE 8181
 
-ENTRYPOINT ["python", "/opt/app/app.py"]
+ENTRYPOINT ["python", "/app.py"]
+
 
