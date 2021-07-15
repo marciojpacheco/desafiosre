@@ -12,7 +12,19 @@ cd desafiosre
 
 # Docker Download
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+install_docker(){
+
+        docker=`dpkg -l | grep "docker-ce "| awk '{print $2":"$3}'`
+
+                if [ -v $docker ]
+                then
+                        echo "Instalando DOCKER"
+                        curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+                        apt-key fingerprint 0EBFCD88 && \
+                        echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker-ce.list
+                        apt-get update && apt-get -o Dpkg::Progress-Fancy="1" -y install docker-ce
+                        docker --version
+
 
 # Docker Compose Download
 
