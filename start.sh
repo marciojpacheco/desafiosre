@@ -2,7 +2,7 @@
 
 # Download da aplicação, Dockerfile e docker-compose.yaml
 echo "Fazendo download da aplicacao..."
-git clone http://github.com/marciojpacheco/desafiosre
+sudo git clone http://github.com/marciojpacheco/desafiosre
 
 # Docker Download
 echo "Fazendo download do docker..."
@@ -23,4 +23,4 @@ docker build -f Dockerfile -t uptime/app .
 
 # Executando Docker Compose 
 echo "Executando Docker Compose..."
-docker-compose up -d && docker ps
+docker-compose up -d && sudo docker ps
