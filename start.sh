@@ -6,7 +6,7 @@ git clone http://github.com/marciojpacheco/desafiosre
 
 # Docker Download
 echo "Fazendo download do docker..."
-sudo yum update
+sudo yum update -y
 sudo yum install docker -yy
 sudo service docker start
 
