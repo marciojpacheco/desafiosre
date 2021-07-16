@@ -9,6 +9,7 @@ echo "Fazendo download do docker..."
 sudo yum update -y
 sudo yum install docker -yy
 sudo service docker start
+sudo usermod -a -G docker ec2-user
 
 # Docker Compose Download
 echo "Instalando Docker compose..."
