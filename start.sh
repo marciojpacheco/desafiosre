@@ -5,7 +5,6 @@ git clone http://github.com/marciojpacheco/desafiosre
 # Docker Download
 sudo yum update
 sudo yum install docker -y
-y
 sudo service docker start
 
 # Docker Compose Download
