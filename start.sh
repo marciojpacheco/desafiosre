@@ -2,7 +2,7 @@
 
 # Download da aplicação, Dockerfile e docker-compose.yaml
 echo "Fazendo download da aplicacao..."
-sudo git clone http://github.com/marciojpacheco/desafiosre
+sudo git clone http://github.com/marciojpacheco/desafiosre /home/ec2-user/desafiosre
 
 # Docker Download
 echo "Fazendo download do docker..."
@@ -17,7 +17,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Acessando diretório desafiosre
-cd desafiosre
+cd /home/ec2-user/desafiosre
 #Criando imagem Docker
 echo "Criando imagem docker..."
 docker build -f Dockerfile -t uptime/app .
