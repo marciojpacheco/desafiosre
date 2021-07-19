@@ -1,0 +1,9 @@
+- hosts: desafio
+  remote_user: ec2-user
+  become: yes
+  become_method: sudo
+  tasks:
+     - name: Copiando script
+       copy: 'src=/desafiosre/start.sh dest=/home/ec2-user/start.sh owner=root group=root mode=755'
+     - name: Executar aplicacao uptimeapp
+       command: /home/ec2-user/start.sh
