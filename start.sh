@@ -24,6 +24,7 @@ sudo systemctl start docker
 
 # Acessando diretório desafiosre
 cd /home/ec2-user/desafiosre
+
 #Criando imagem Docker
 echo -en "Criando imagem docker..."
 docker build -f Dockerfile -t uptime/app .
